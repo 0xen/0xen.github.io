@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>John Greens Portfolio</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,13 +18,67 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <div class="alert alert-danger" role="alert">
-      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-      <span class="sr-only">TEST:</span>
-      Is bootstrap working for you or just me? :)
-    </div>
 
+
+    <div class="row">
+      <div class="col-md-8">
+        <div id="section1">
+          <h3 class="text-center">About - Who am I?</h3>
+          
+        </div>
+        <div id="section2">
+          <h3 class="text-center">Professional Work</h3>
+          
+        </div>
+        <div id="section3">
+          <h3 class="text-center">Persional Projects</h3>
+          
+        </div>
+        
+      </div>
+      <div class="col-md-4">
+        <!--Nav bar-->
+
+        <ul class="nav nav-pills nav-stacked" id="myNavbar">
+          <li role="presentation" class="active"><a href="#section1">About</a></li>
+          <li role="presentation"><a href="#section2">Professional Work</a></li>
+          <li role="presentation"><a href="#section3">Persional Projects</a></li>
+        </ul>
+      </div>
+    </div>
+    
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+    <!-- Load scripts last for loading preformance-->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
