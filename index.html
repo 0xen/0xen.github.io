@@ -1,87 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>John Greens Portfolio</title>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative;
+    background-color: #6c7580;
+  }
+  ul.nav-pills {
+    top: 20px;
+    position: fixed;
+  }
+  a {
+    color: #fff;
+  }
+  p {
+    font-size: 18px;
+  }
+  #section1 {
+    color: #fff;
+    background-color: #343a42;
+    font-size: 28px;
+  }
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  #section2 {
+    color: #fff;
+    background-color: #343a42;
+    font-size: 28px;
+  }
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+  #section3 {
+    color: #fff;
+    background-color: #343a42;
+    font-size: 28px;
+  }
+  
+  @media screen and (max-width: 810px) {
+    #section1, #section2, #section3  {
+      margin-left: 150px;
+    }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
 
+<div class="container">
+  <div class="row">
+    <nav class="col-sm-3" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Profesional Work<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section2">Profesional Work</a></li>
+            <li><a href="#section21">Alan Wake Remastered</a></li>
+            <li><a href="#section22">Guardians of the Galaxy</a></li> 
+            <li><a href="#section23">Project 3 - Unreleased</a></li>                     
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Personal Projects<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#section3">Personal Projects</a></li>
+            <li><a href="#section31">2D Game Engine</a></li>
+            <li><a href="#section32">RTX Raytracer</a></li>   
+            <li><a href="#section33">Entity Component Game Engine</a></li>   
+            <li><a href="#section34">Gameboy Emulator</a></li>   
+            <li><a href="#section35">Gameboy Raycaster</a></li>                     
+          </ul>
+        </li>
+        
+      </ul>
+    </nav>
+    <div class="col-sm-9">
+      <!-- About -->
+      <div id="section1">    
+        <h1>About</h1>
 
-    <div class="row">
-      <div class="col-md-8">
-        <div id="section1">
-          <h3 class="text-center">About - Who am I?</h3>
+          <div class="row">
+            <div class="col-md-4">
+              <a href="#" class="thumbnail">
+                <img src="images/me.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <p>Hi! My name is John Green and I am a computer graphics engeneer based in the UK currently working in the video game sector. My main passion is computer graphics, but I love exploring new areas of programming and electronics to expand my knowledge of the wider field. I have currently worked on four professional projects, two of which are published so far. I have experience in several computer graphics APIs such as Vulkan, DirectX 9-12, OpenGL and some platform specific APIs.</p>
+              <p>Outside of work I continue my development by tinkering with lots of little projects to keep me on my toes and to learn more, one of which is a 2D game engine in Vulkan. I also love learning about older games consoles and have made my own Gameboy emulator (to run the game on pc) and hardware (to trick the console into reading my pcb as a cartridge).</p>
+            </div>
+          </div>
+        
           
-        </div>
-        <div id="section2">
-          <h3 class="text-center">Professional Work</h3>
-          
-        </div>
-        <div id="section3">
-          <h3 class="text-center">Persional Projects</h3>
-          
-        </div>
         
       </div>
-      <div class="col-md-4">
-        <!--Nav bar-->
 
-        <ul class="nav nav-pills nav-stacked" id="myNavbar">
-          <li role="presentation" class="active"><a href="#section1">About</a></li>
-          <li role="presentation"><a href="#section2">Professional Work</a></li>
-          <li role="presentation"><a href="#section3">Persional Projects</a></li>
-        </ul>
+      <!--Profesional Work -->
+      <div id="section2"> 
+        <h1> Professional Work</h1>
+
+        <div id="section21"> 
+          <h2>Alan Wake Remastered</h2>
+  
+          <div class="row">
+            <div class="col-md-9">
+              <p>During my time at d3t I worked on several tasks whilst on this project. I was in charge of     implementing and updating post-process passes such as motion blur, paralax mapping and velocity   blur.   As well as this I helped debug and optimize various areas in the game that related to   computer  graphics using tools such as PIX and NVidia NSight.</p>
+            </div>
+          <div class="col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="images/awr.png" alt="...">
+            </a>
+          </div>
+        </div>
+
+        </div>
+
+        <div id="section22"> 
+          <h2>Marvel's Guardians of the Galaxy</h2>
+  
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#" class="thumbnail">
+                <img src="images/gotg.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-md-9">
+              <p>When working on Marvel's Guardians of the Galaxy I was helping to port the title to a new platform,  as well as being in charge of porting the rendering API over to Vulkan. During this project, I learned a   lot of intricacies involved with switching a AAA title over to a new platform, as well as the   complexities of being in charge of such a large deliverable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="section23"> 
+          <h2>Project 3 - Unreleased</h2>
+          <p>I have also whilst at d3t worked on a title that is still under NDA where I was leading the rendering for the duration of the project.</p>
+        </div>
+
       </div>
+
+      <!-- Personal Projects -->
+      <div id="section3"> 
+        <h1>Personal Projects</h1>
+
+        <div id="section31"> 
+          <h2>2D Game Engine</h2>
+
+          <div class="row">
+            <div class="col-md-5">
+              <a href="#" class="thumbnail">
+                <img src="images/2dengine.png" alt="...">
+              </a>
+            </div>
+            <div class="col-md-7">
+              <p>In my own time I started making a 2D game engine in Vulcan to develop an adventure game. The engine itself is made to render as efficiently as possible using various rendering techniques such as view frustum culling using compute shaders and pre made render sets to allow for zero render command list updates. The project includes a editor and a game with several libraries designed for the engine to preform maths, physics, world streaming, etc.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="section32"> 
+          <h2>RTX Raytracer</h2>
+
+          <div class="row">
+            <div class="col-md-7">
+              <p>During my time at university I took my third year project (Entity Component Game Engine) and added Vulkans RTX ray tracing to it. I developed several tools, techniques and effects during this project. Initially I was considering adding post process effects for depth of field, but using RTX, I was able to generate dof by passing the camera rays through a mathematical representation of a camera lense to generate the effect. As well as this I implemented ray traced soft and hard shadows, reflection/refraction, transparency and every material in the renderer was PBR with paralax mapping enabled.</p>
+              <p>A secondary rendering mode was added for offline video capture to allow me to record camera paths and have the RTX renderer record extremely high quality shots at 4K 60FPS when in real world time, each second, around 3-4 fps was achieved during these quality shots.</p>
+            </div>
+            <div class="col-md-5">
+              <a href="#" class="thumbnail">
+                <img src="images/rtx1.jpg" alt="...">
+              </a>
+              <a href="#" class="thumbnail">
+                <img src="images/rtx2.jpg" alt="...">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="section33"> 
+          <h2>Entity Component Game Engine</h2>
+
+          <div class="row">
+            <div class="col-md-5">
+              <a href="#" class="thumbnail">
+                <img src="images/ecs1.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-md-7">
+              <p>For my third year project I created a Entity component game engine that used the Vulkan API as its primary rendering API. This project was a technical task to see if I could implement a fast ECS with pre generate entity lookup caches and use some vulkan API rendering techniques to tie into the ECS and enable fast, dynamic rendering and logic. One such technique I used was utilizing indirect drawing where I was able to pre generate a list of draw commands and gpu side dynamically turn them on and off based on visibility and if the component was turned on or off.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="section34"> 
+          <h2>Gameboy Emulator</h2>
+          <h3>Software Emulation</h3>
+
+          <div class="row">
+            <div class="col-md-7">
+              <p>Learning how computers work under the hood has always been a fascination with me and learning how emulators worked is something I always wanted to do. In this project I made a gameboy emulator in c/c++ using imgui to help debug frame data and to see how games used to work under the hood. The emulator is fully comparable with all games and all cartridge types (MBC, MBC3, MBC5, etc).</p>
+            </div>
+            <div class="col-md-5">
+              <a href="#" class="thumbnail">
+                <img src="images/emulator1.jpg" alt="...">
+              </a>
+            </div>
+          </div>
+
+          <h3>Hardware Enulation</h3>
+
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#" class="thumbnail">
+                <img src="images/emulation2.png" alt="...">
+              </a>
+            </div>
+            <div class="col-md-9">
+              <p>As well as learning how the CPU worked, I wanted to see if i could trick a gameboy into accepting my own PCBs as a actual gameboy cartridge. I achieved this and published the code and information to my github and was referenced in several articles. In this I used a micro controller to read the address request pins and served up the game data when requested. I want to continue work on this in the future with the PICO-W that has built in wifi and Bluetooth as this will be a fun feature to experiment with.</p>
+              <h3>Related Articles</h3>
+              <p><a href="https://www.tomshardware.com/news/raspberry-pi-pico-game-boy-cartridge">Pico Cartridge</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="section35"> 
+          <h2>Gameboy Raycaster</h2>
+
+          <div class="row">
+            <div class="col-md-9">
+              <p>WIP. I am working on a gameboy ray caster where I am aiming to generate graphics similar to the original doom but on limited hardware. This project is wrote in raw x80 ASM and is available to se eon github.</p>
+            </div>
+            <div class="col-md-3">
+              <a href="#" class="thumbnail">
+                <img src="images/gbgame.jpg" alt="...">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-    
+  </div>
+</div>
 
-<script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});   
-
-  // Add smooth scrolling on all links inside the navbar
-  $("#myNavbar a").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    }  // End if
-  });
-});
-</script>
-
-
-    <!-- Load scripts last for loading preformance-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+</body>
 </html>
